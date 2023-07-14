@@ -1,12 +1,12 @@
 {
   "name": "@yogeshicube/publish_npm_package_demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "publish package on npm",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "yarn run build"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,9 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@egiftify/fe_ts_module": "latest"
+  }
 }
