@@ -18,6 +18,7 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
       - run: npm ci
       - run: npm run build
+      - run: npm cache clean --force
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN_AUTH }}" > ~/.npmrc
       - run: npm publish --access public
     env:
