@@ -1,4 +1,4 @@
- 
+      
         name: "publish npm"
 
         on: push
@@ -12,9 +12,10 @@
                     - name: node
                       uses: actions/setup-node@v2
                       with:
-                          node-version: 12
+                          node-version: '18.X.X'
                           registry-url: https://registry.npmjs.org
                     - name: publish
                       run: npm publish --access public
+                      working-directory: my-package
                       env:
                           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN_AUTH}}
